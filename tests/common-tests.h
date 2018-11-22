@@ -2845,7 +2845,7 @@ TEST_CASE_METHOD(common_tests, "Rowset expected exception", "[core][exception][r
     std::string troublemaker;
     CHECK_THROWS_AS(
         rowset<std::string>((sql.prepare << "select str from soci_test", into(troublemaker))),
-    		    &soci_error
+    		    soci_error &soci_error
         );
 }
 
