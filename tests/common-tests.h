@@ -4402,7 +4402,7 @@ TEST_CASE_METHOD(common_tests, "XML", "[core][xml]")
             (sql << "insert into soci_test(id, x) values (2, "
                         + tc_.to_xml(":1") + ")",
                     use(xml)
-            ), &soci_error
+            ), soci_error &soci_error
         );
     }
 }
